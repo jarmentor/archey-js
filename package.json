@@ -1,12 +1,20 @@
 {
-    "name": "archey-js",
+    "name": "@jarmentor/archey-js",
     "version": "1.0.0",
-    "description": "godmode console welcome message heavily inspired by obihann/archey-osx and written in JS",
+    "description": "console banner message heavily inspired by obihann/archey-osx and written in JS",
     "main": "index.js",
     "author": "Jonathan Armentor <jonathan@jonathanarmentor.com> (https://jonathanarmentor.com/)",
     "license": "MIT",
+    "homepage": "https://github.com/jarmentor/archey-js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jarmentor/archey-js.git"
+    },
     "bin": {
         "archey-js": "./index.js"
+    },
+    "engines": {
+        "node": ">=7.8.0"
     },
     "dependencies": {
         "chalk": "^4.1.0",
