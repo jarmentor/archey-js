@@ -19,7 +19,8 @@ An [archey](https://github.com/djmelik/archey) script CLI for macOS written in J
 ## Installation
 
 ```bash
-  npm i -g @jarmentor/archey-js
+npm i -g @jarmentor/archey-js
+archey-js
 ```
 
 ## Roadmap
@@ -31,7 +32,7 @@ An [archey](https://github.com/djmelik/archey) script CLI for macOS written in J
     -   [ ] Options Documentation
     -   [ ] Download Instructions
     -   [ ] Install instructions
-    -   [ ] Usage instructions
+    -   [X] Usage instructions
 -   [ ] Code
     -   [ ] Comments
 
