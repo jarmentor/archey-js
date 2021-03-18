@@ -1,0 +1,11 @@
+{
+    "name": "archey-js",
+    "version": "1.0.0",
+    "description": "godmode console welcome message heavily inspired by obihann/archey-osx and written in JS",
+    "main": "index.js",
+    "author": "Jonathan Armentor <jonathan@jonathanarmentor.com> (https://jonathanarmentor.com/)",
+    "license": "MIT",
+    "bin": {
+        "archey-js": "./index.js"
+    },
+}
