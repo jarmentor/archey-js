@@ -8,4 +8,8 @@
     "bin": {
         "archey-js": "./index.js"
     },
+    "dependencies": {
+        "chalk": "^4.1.0",
+        "clear": "^0.1.0"
+    }
 }
