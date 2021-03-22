@@ -1,12 +1,13 @@
 # @jarmentor/Archey-JS
 
-An [archey](https://github.com/djmelik/archey) script CLI for macOS written in Javascript.
+An [archey](https://github.com/djmelik/archey) CLI for macOS written in Javascript.
 
 ## Table Of Contents
 
 - [@jarmentor/Archey-JS](#jarmentorarchey-js)
   - [Table Of Contents](#table-of-contents)
   - [Installation](#installation)
+  - [Updating](#updating)
   - [Roadmap](#roadmap)
     - [Documentation](#documentation)
     - [Functionality](#functionality)
@@ -23,15 +24,21 @@ npm i -g @jarmentor/archey-js
 archey-js
 ```
 
+## Updating
+
+```bash
+npm update -g @jarmentor/archey-js
+```
+
 ## Roadmap
 
 ### Documentation
 
--   [ ] Help
--   [ ] Readme
-    -   [ ] Options Documentation
-    -   [ ] Download Instructions
-    -   [ ] Install instructions
+-   [x] Help
+-   [x] Readme
+    -   [x] Options Documentation
+    -   [x] Download Instructions
+    -   [x] Install instructions
     -   [x] Usage instructions
 -   [ ] Code
     -   [ ] Comments
@@ -39,14 +46,14 @@ archey-js
 ### Functionality
 
 -   [ ] Options
-    -   [ ] Help
+    -   [x] Help
     -   [x] Color
     -   [ ] No-Color
     -   [x] IP Address
-        -   [x] IP Address Local
-        -   [ ] IP Address Interface specific
-        -   [ ] IP Address External
-    -   [ ] Router
+            -   [x] IP Address Local
+            -   [ ] IP Address Interface specific
+            -   [ ] IP Address External
+        -   [ ] Router
 -   [ ] Custom Logo
 
 ### Datapoints
@@ -55,7 +62,7 @@ archey-js
 -   [x] Hostname
 -   [x] Distro
 -   [x] Kernel
--   [x] Uptime
+-   [ ] Uptime
 -   [x] Shell
 -   [x] Terminal Application
 -   [x] CPU
