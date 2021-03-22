@@ -32,7 +32,7 @@ archey-js
     -   [ ] Options Documentation
     -   [ ] Download Instructions
     -   [ ] Install instructions
-    -   [X] Usage instructions
+    -   [x] Usage instructions
 -   [ ] Code
     -   [ ] Comments
 
@@ -42,9 +42,8 @@ archey-js
     -   [ ] Help
     -   [x] Color
     -   [ ] No-Color
-    -   [ ] IP Address
-        -   [ ] IP Address Optional
-        -   [ ] IP Address Local
+    -   [x] IP Address
+        -   [x] IP Address Local
         -   [ ] IP Address Interface specific
         -   [ ] IP Address External
     -   [ ] Router
@@ -63,7 +62,7 @@ archey-js
 -   [x] Memory
 -   [x] Disk
 -   [ ] Battery
--   [ ] IP Address
+-   [x] IP Address
 
 ### Publishing
 
