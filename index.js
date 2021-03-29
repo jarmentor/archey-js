@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 ;`use strict`
 const main = require('./main')
+const archey = require('./archey')
 const clear = require('clear')
 const yargs = require('yargs')
 
