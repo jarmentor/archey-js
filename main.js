@@ -25,7 +25,7 @@ function main({ inline, dataOnly }, offset = 4) {
 
         lines++
 
-        if (dataKeys.length == lines) {
+        if (dataKeys.length - 1 == lines) {
             console.log('\n\n')
             process.exit(0)
         }
