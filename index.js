@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 ;`use strict`
 const main = require('./main')
+const clear = require('clear')
 const yargs = require('yargs')
 
 const argv = yargs
@@ -21,4 +22,9 @@ const argv = yargs
     .alias('help', 'h')
     .alias('version', 'v').argv
 
-main(argv)
+!argv.inline && clear()
+
+main(argv, () => {
+    console.log('\n\n')
+    process.exit(0)
+})
