@@ -1,4 +1,4 @@
-const command = require('./command')
+const command = require('./utils').command
 
 module.exports = {
     user: command('whoami'),
