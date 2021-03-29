@@ -1,25 +1,31 @@
 const clear = require('clear')
-const chalk = require('chalk')
-const { chalkish, logo, datapoints } = require('./lib')
+const {
+    format: { chalk, chalkish },
+    logo,
+    datapoints,
+} = require('./lib')
 
-function main(argv) {
-    const { inline, dataOnly } = argv
-    let num = 0
-    const topOffset = 4
+function main({ inline, dataOnly }, offset = 4) {
+    let lines = 0
     const logoSplit = chalkish`${logo}`.split('\n')
+    const dataKeys = Object.keys(datapoints)
 
-    console.log('\n\n')
     !inline && clear()
-    !dataOnly && logoSplit.slice(0, topOffset).map((line) => console.log(line))
+    !dataOnly && logoSplit.slice(0, offset).map((line) => console.log(line))
 
-    Object.keys(datapoints).map(async (key) => {
-        let data = await datapoints[key]
-        console.log(
-            !dataOnly ? logoSplit[num + topOffset] : '',
-            `${chalk.blue(key)}: ${chalk.whiteBright(data.trim())}`
-        )
-        num++
-        if (num == Object.keys(datapoints).length - 1) {
+    dataKeys.map(async (current) => {
+        const data = await datapoints[current]
+
+        const [logoString, key, value] = [
+            logoSplit[lines + offset],
+            chalk.blue(current),
+            chalk.whiteBright(data.trim()),
+        ]
+        console.log(`${!dataOnly ? logoString : ''} ${key}: ${value}`)
+
+        lines++
+
+        if (dataKeys.length == lines) {
             console.log('\n\n')
             process.exit(0)
         }
