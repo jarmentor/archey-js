@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 ;`use strict`
-const main = require('./main')
-const archey = require('./archey')
+const Archey = require('./archey')
+const datapoints = require('./datapoints')
 const clear = require('clear')
 const yargs = require('yargs')
 
@@ -23,9 +23,8 @@ const argv = yargs
     .alias('help', 'h')
     .alias('version', 'v').argv
 
-!argv.inline && clear()
+if (!argv.inline) {
+    clear()
+}
 
-main(argv, () => {
-    console.log('\n\n')
-    process.exit(0)
-})
+Archey(argv, datapoints)

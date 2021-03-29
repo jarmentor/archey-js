@@ -1,10 +1,35 @@
-#!/usr/bin/env node
-;`use strict`
+const { chalkish, chalk } = require('./utils')
 
-const { datapoints, chalkish } = require('./lib')
-const chalk = require('chalk')
+function Archey({ dataOnly }, datapoints) {
+    this.lines = 0
+    this.datapoints = datapoints
+    this.keys = Object.keys(this.datapoints)
+    this.offset = Archey.logo.length - this.keys.length
 
-let logo = `
+    if (!dataOnly) {
+        let beforeData = Archey.logo.prepare.slice(0, this.offset)
+        beforeData.map((line) => console.log(line))
+    }
+    keys.map(async (point) => {
+        let data = await this.datapoints[point]
+        let stringParts = [
+            !dataOnly ? Archey.logo.prepare[this.lines + this.offset] : '',
+            chalk.blue(point),
+            chalk.whiteBright(data.trim()),
+        ]
+
+        console.log(...stringParts)
+        this.lines++
+
+        if (this.lines == keys.length - 1) {
+            console.log('\n\n')
+            process.exit(0)
+        }
+    })
+}
+
+Archey.logo = {
+    string: `
     {green.bold                 •••                 }
     {green.bold                ••••                 }
     {green.bold                •••                  }
@@ -18,54 +43,14 @@ let logo = `
     {magenta.bold      •••••••••••••••••••••          }
     {blue.bold         ••••••••••••••••            }
     {blue.bold          ••••     •••••             }
-`
+`,
+    get prepare() {
+        return chalkish`${this.string}`.split('\n')
+    },
 
-class Archey {
-    constructor(logo = ``, datapoints = {}) {
-        this.lines = 0
-        this.offset = 0
-        this.logo = logo
-        this.datapoints = datapoints
-        this.output = []
-        this.init()
-    }
-
-    init() {
-        this.logo = chalkish`${this.logo}`.split('\n')
-        this.offset = this.logo.length - Object.keys(this.datapoints).length
-        this.main()
-    }
-
-    async assembleLine(point) {
-        let line = ''
-        const data = await this.datapoints[point]
-
-        const [logoString, key, value] = [
-            this.logo[this.lines + this.offset],
-            chalk.blue(point),
-            chalk.whiteBright(data.trim()),
-        ]
-
-        line = `${logoString} ${key} ${value}`
-        console.log(line)
-
-        this.lines++
-        if (Object.keys(this.datapoints).length - 1 == this.lines) {
-            console.log('\n\n')
-            process.exit(0)
-        }
-    }
-
-    static logLines(lines = []) {
-        lines.map((line) => console.log(line))
-    }
-
-    main() {
-        Archey.logLines(this.logo.slice(0, this.offset))
-        Object.keys(this.datapoints).map((point) => {
-            this.assembleLine(point)
-        })
-    }
+    get length() {
+        return this.prepare.length
+    },
 }
 
-const arch = new Archey(logo, datapoints)
+module.exports = Archey

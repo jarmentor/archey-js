@@ -1,3 +1,4 @@
+const { exec } = require('child_process')
 const chalk = require('chalk')
 function chalkish([raw, ...parts], ...substitutions) {
     let resultsRaw = []
@@ -25,4 +26,21 @@ function chalkish([raw, ...parts], ...substitutions) {
     return chalk(chalkParts)
 }
 
-module.exports = chalkish
+async function command(cmd) {
+    return new Promise((resolve, reject) => {
+        exec(cmd, (err, stdout, { signal }) => {
+            if (err) {
+                reject(err)
+                return
+            }
+
+            if (signal == 'SIGTERM') {
+                resolve('Process was killed')
+            }
+
+            resolve(stdout)
+        })
+    })
+}
+
+module.exports = { command, chalkish, chalk }
