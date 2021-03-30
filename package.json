@@ -1,14 +1,34 @@
 {
     "name": "@jarmentor/archey-js",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "console banner message heavily inspired by obihann/archey-osx and written in JS",
     "main": "index.js",
-    "author": "Jonathan Armentor <jonathan@jonathanarmentor.com> (https://jonathanarmentor.com/)",
+    "author": {
+        "name": "Jonathan Armentor",
+        "email": "jarmentor@me.com",
+        "url": "https://github.com/jarmentor"
+    },
     "license": "MIT",
     "homepage": "https://github.com/jarmentor/archey-js",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/jarmentor/archey-js.git"
+    },
+    "keywords": [
+        "macos",
+        "terminal",
+        "command line",
+        "system",
+        "stats",
+        "developer",
+        "information",
+        "dashboard",
+        "node",
+        "cli",
+        "developer tools"
+    ],
+    "scripts": {
+        "start": "node ."
     },
     "bin": {
         "archey-js": "./index.js"

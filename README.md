@@ -1,6 +1,10 @@
 # @jarmentor/Archey-JS
 
+Start your workflow right.
+
 An [archey](https://github.com/djmelik/archey) CLI for macOS written in Javascript.
+
+![archey-js](https://i.postimg.cc/hSxtXNNF/archey-js.png)
 
 ## Table Of Contents
 
@@ -49,10 +53,7 @@ npm update -g @jarmentor/archey-js
     -   [x] Help
     -   [x] Color
     -   [ ] No-Color
-    -   [x] IP Address
-            -   [x] IP Address Local
-            -   [ ] IP Address Interface specific
-            -   [ ] IP Address External
+    -   [x] IP Address - [x] IP Address Local - [ ] IP Address Interface specific - [ ] IP Address External
         -   [ ] Router
 -   [ ] Custom Logo
 
@@ -62,13 +63,12 @@ npm update -g @jarmentor/archey-js
 -   [x] Hostname
 -   [x] Distro
 -   [x] Kernel
--   [ ] Uptime
+-   [x] Uptime
 -   [x] Shell
 -   [x] Terminal Application
 -   [x] CPU
 -   [x] Memory
 -   [x] Disk
--   [ ] Battery
 -   [x] IP Address
 
 ### Publishing
