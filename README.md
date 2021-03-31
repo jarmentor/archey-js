@@ -4,7 +4,7 @@ Start your workflow right.
 
 An [archey](https://github.com/djmelik/archey) CLI for macOS written in Javascript.
 
-![archey-js](https://i.postimg.cc/hSxtXNNF/archey-js.png)
+![archey-js](https://i.postimg.cc/433k5YPS/render1617176968661.gif)
 
 ## Table Of Contents
 
