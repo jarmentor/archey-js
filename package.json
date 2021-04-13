@@ -1,8 +1,11 @@
 {
     "name": "@jarmentor/archey-js",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "console banner message heavily inspired by obihann/archey-osx and written in JS",
     "main": "index.js",
+    "os": [
+        "darwin"
+    ],
     "author": {
         "name": "Jonathan Armentor",
         "email": "jarmentor@me.com",

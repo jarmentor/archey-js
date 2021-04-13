@@ -2,26 +2,22 @@ const { chalkish, chalk } = require('./utils')
 
 function Archey({ dataOnly }, datapoints) {
     this.lines = 0
-    this.datapoints = datapoints
-    this.keys = Object.keys(this.datapoints)
+    this.keys = Object.keys(datapoints)
     this.offset = Archey.logo.length - this.keys.length
+    this.logo = Archey.logo.prepare
 
-    if (!dataOnly) {
-        let beforeData = Archey.logo.prepare.slice(0, this.offset)
-        beforeData.map((line) => console.log(line))
-    }
-    keys.map(async (point) => {
-        let data = await this.datapoints[point]
-        let stringParts = [
-            !dataOnly ? Archey.logo.prepare[this.lines + this.offset] : '',
+    !dataOnly && console.log(this.logo.splice(0, this.offset).join('\n'))
+
+    this.keys.map(async (point) => {
+        let data = await datapoints[point]
+        console.log(
+            dataOnly || Archey.logo.prepare[this.lines + this.offset],
             chalk.blue(point),
-            chalk.whiteBright(data.trim()),
-        ]
-
-        console.log(...stringParts)
+            chalk.whiteBright(data.trim())
+        )
         this.lines++
 
-        if (this.lines == keys.length - 1) {
+        if (this.lines == this.keys.length - 1) {
             console.log('\n\n')
             process.exit(0)
         }
